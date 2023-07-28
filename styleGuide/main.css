@@ -1,0 +1,119 @@
+/* SWDV 640: User Interface Design */
+/* Style Guide CSS File */
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto&display=swap');
+
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+main > div {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pangolin', cursive;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 15px;
+}
+
+button:active {
+    border-color: white;
+}
+
+.darkTheme {
+    background-color: rgb(35, 35, 35);
+    color: white;
+}
+
+/* Colors */
+.red {
+    background-color: rgb(255, 179, 186);
+}
+
+.orange {
+    background-color: rgb(255, 223, 186);
+}
+
+.yellow {
+    background-color: rgb(255, 255, 186);
+}
+
+.green {
+    background-color: rgb(186, 255, 201);
+}
+
+.blue {
+    background-color: rgb(196, 225, 255);
+}
+
+.colorSquare {
+    height: 100px;
+    width: 100px;
+}
+
+#colorsBox {
+    display: flex;
+}
+
+/* Form elements */
+label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+input[type='text'] {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    height: 17.5px;
+    width: 17.5px;
+}
+
+.formEle {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+/* Messages */
+.message {
+    font-weight: 600;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Header and footer */
+header, footer {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    color: black;
+}
+
+#themeSwitcher {
+    width: 25px;
+}
+
+#themeSwitcher:hover {
+    color: white;
+}

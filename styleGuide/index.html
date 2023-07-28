@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <!-- SWDV 640: User Interface Design -->
+    <!-- Style Guide -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ben's Style Guide</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+       
+        <script src="https://kit.fontawesome.com/4179169019.js" crossorigin="anonymous"></script>
+        <script>
+            function changeTheme() {
+                const body = document.body;
+                const icon = document.getElementById('themeSwitcher');
+
+                if (body.classList.contains('darkTheme')) {
+                    body.classList.remove('darkTheme');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    body.classList.add('darkTheme');
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }    
+        </script>
+    </head>
+
+    <body>
+        <header class="blue">
+            <p>Style Guide</p>
+            <i id="themeSwitcher" class="fa-solid fa-sun fa-xl" onclick="changeTheme();"></i>
+        </header>
+        
+        <main>
+            <!-- Font -->
+            <div id="font">
+                <h1>Font</h1>
+                <p>My appication will utilize the 'Roboto', sans-serif font family for most text and the 'Pangolin', cursive font family for headings.</p>
+            </div>
+
+            <!-- Color -->
+            <div id="color">
+                <h1>Color Theme</h1>
+                <p>My application will incorporate the below color palette:</p>
+
+                <div id="colorsBox">
+                    <div class="colorSquare red"></div>
+                    <div class="colorSquare orange"></div>
+                    <div class="colorSquare yellow"></div>
+                    <div class="colorSquare green"></div>
+                    <div class="colorSquare blue"></div>
+                </div>
+            </div>
+
+            <!-- Headings -->
+            <div id="headings">
+                <h1>Headings</h1>
+                <p>The below font sizes and styles will be used as headings for the appication:</p>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+            </div>
+
+            <!-- Buttons -->
+            <div id="buttons">
+                <h1>Buttons</h1>
+                <p>My application will contain buttons with the below style:</p>
+                
+                <button class="orange">Press Me!</button>
+            </div>
+
+            <!-- Form elements -->
+            <div id="formEles">
+                <h1>Form Elements</h1>
+                <p>The application's forms will contain input fields and labels with the below styling:</p>
+            
+                <div class="formEle">
+                    <label for="test">Text Box</label>
+                    <input type="text" name="test" id="test">
+                </div>
+
+                <div class="formEle">
+                    <label for="check">Check Box</label>
+                    <input class="checkBox" type="checkbox" id="check" name="check">
+                </div>
+
+                <div class="formEle">
+                    <label for="radio">Radio Button</label>
+                    <input class="radio" type="radio" id="radio" name="radio">
+                </div>
+            </div>
+
+            <!-- Messages -->
+            <div id="messages">
+                <h1>Messages</h1>
+                <p>Notifications will be presented to the user based on completed tasks. The following contextual messages will be used:</p>
+
+                <p class="message yellow">Warning!</p>
+                <p class="message red">Danger!</p>
+                <p class="message green">Success!</p>
+            </div>
+        </main>
+
+        <footer class="orange">
+            <p>Ben Wilkins</p>
+            <p>SWDV 640</p>
+        </footer>
+    </body>
+</html>
