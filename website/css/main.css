@@ -1,0 +1,292 @@
+@font-face {
+  font-family: 'Pangolin';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/pangolin/v11/cY9GfjGcW0FPpi-tWPfK.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+main {
+  min-height: 84vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Pangolin', cursive;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: 1px solid black;
+  border-radius: 40px;
+  padding: 15px;
+  background-color: #ffdfba;
+}
+button:active {
+  border-color: white;
+}
+.darkTheme {
+  background-color: #232323;
+}
+.darkTheme .concertList .concertRow {
+  color: white;
+}
+.darkTheme .concertList .concertRow .concertTitle {
+  color: #baffc9;
+}
+.darkTheme .concertList .concertRow .concertAt {
+  color: #ffffba;
+}
+.darkTheme .concertList .concertRow .concertVenue {
+  color: #ffdfba;
+}
+.darkTheme .concertList #concertLoading {
+  color: white;
+}
+.darkTheme #themeSwitcher {
+  background-color: #ffdfba;
+  border-color: white;
+}
+#themeSwitcher {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  padding: 17.5px;
+  border-radius: 50%;
+  border: 1px solid #212529;
+  background-color: #ffffba;
+  color: #ff9821;
+}
+#themeSwitcher:hover {
+  color: #ed7f00;
+}
+#navBar {
+  background-color: #c4e1ff;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#navBar #browseLink,
+#navBar #ticketsLink,
+#navBar #logInLink,
+#navBar #cartLink {
+  padding: 5px;
+  border-radius: 50%;
+}
+#navBar #browseLink,
+#navBar #ticketsLink,
+#navBar #logInLink {
+  color: #006ddd;
+}
+#navBar #browseLink:hover,
+#navBar #ticketsLink:hover,
+#navBar #logInLink:hover {
+  color: #0054aa;
+  background-color: #baffc9;
+}
+#navBar #cartLink {
+  color: #ff9821;
+  background-color: #ffffba;
+}
+#navBar #cartLink:hover {
+  color: #ff8c08;
+  background-color: #ffdfba;
+}
+#navBar #navLeft {
+  display: flex;
+  align-items: center;
+}
+#navBar #searchContainer {
+  margin-left: 15px;
+}
+#navBar #searchContainer #searchBar {
+  width: 34vw;
+  border-radius: 15px;
+  padding-left: 1vw;
+}
+#navBar #searchContainer i {
+  color: #006ddd;
+}
+#navBar #siteLogo {
+  height: 8vh;
+  width: auto;
+}
+#navBar #navMiddle > a {
+  margin-left: 15px;
+}
+#navBar #cartLink {
+  margin-right: 5px;
+}
+#navBar .hamburger {
+  display: none;
+}
+#navBar .hamburger button {
+  background-color: #ffffba;
+  color: #ff8c08;
+}
+#navBar .hamburger a {
+  color: #0054aa;
+}
+#navBar .hamburger a:hover {
+  background-color: #baffc9;
+}
+#navBar .hamburger p {
+  color: #006e18;
+}
+#navBar .hamburger p:hover {
+  background-color: #c4e1ff;
+}
+#navBar .hamburger .dropdown-header {
+  background-color: #ffa43b;
+  color: #212529;
+}
+#navBar .hamburger .dropdown-menu {
+  background-color: #ffdfba;
+}
+#altSearch {
+  display: none;
+}
+footer {
+  height: 8vh;
+  background-color: #ffdfba;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+label {
+  font-weight: 600;
+  margin-right: 10px;
+}
+input[type='text'] {
+  padding: 5px;
+  border-radius: 5px;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  height: 17.5px;
+  width: 17.5px;
+}
+.formEle {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.message {
+  font-weight: 600;
+  color: #212529;
+  padding: 10px;
+  border-radius: 8px;
+}
+.concertList {
+  max-width: 800px;
+  margin-bottom: 25px;
+}
+.concertList .concertImgCol {
+  display: flex;
+  justify-content: center;
+}
+.concertList .concertInfoCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.concertList .concertInfoCol h2 {
+  margin: 0;
+}
+.concertList .concertInfoCol p {
+  margin-top: 5px;
+}
+.concertList .concertImg {
+  width: 85%;
+  height: 190px;
+  max-width: 400px;
+  border: 4px solid #baffc9;
+  transition: 0.2s;
+}
+.concertList .concertRow {
+  color: #212529;
+  margin-top: 25px;
+}
+.concertList .concertRow:hover .concertImg {
+  border-color: #3bff65;
+}
+.concertList #concertLoading {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5vh;
+}
+@media screen and (max-width: 950px) {
+  #navBar .hamburger {
+    display: block;
+  }
+  #navBar #browseLink,
+  #navBar #ticketsLink,
+  #navBar #cartLink,
+  #navBar #logInLink {
+    display: none;
+  }
+  #navBar #searchContainer #searchBar {
+    width: 50vw;
+  }
+  #themeSwitcher {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  #searchContainer {
+    display: none;
+  }
+  #altSearch {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  #altSearch #altSearchBar {
+    width: 85vw;
+    border-radius: 15px;
+    padding-left: 2vw;
+  }
+  #altSearch i {
+    color: #006ddd;
+  }
+}
+@media screen and (max-width: 576px) {
+  .concertList .concertInfoCol {
+    align-items: center;
+  }
+  .concertList .concertHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .concertList .concertHeader p {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .concertList .concertImg {
+    height: 165.5px;
+  }
+}

@@ -1,0 +1,382 @@
+// SWDV 640: User Interface Design 
+// Week 6 LESS Stylesheet Assignment
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Roboto&display=swap');
+
+// Variables
+@red: rgb(255, 179, 186);
+@orange: rgb(255, 223, 186);
+@yellow: rgb(255, 255, 186);
+@green: rgb(186, 255, 201);
+@blue: rgb(196, 225, 255);
+
+@textBlack: #212529;
+@headerFooterHeight: 8vh;
+
+// Mixins
+.fit-content() {
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.hide() {
+    display: none;
+}
+
+// General
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    min-height: 100vh - (2 * @headerFooterHeight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pangolin', cursive;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 40px;
+    padding: 15px;
+    background-color: @orange;
+
+    &:active {
+        border-color: white;
+    }
+}
+
+// Dark theme
+.darkTheme {
+    background-color: rgb(35, 35, 35);
+
+    .concertList {
+        .concertRow {
+            color: white;
+
+            .concertTitle {
+                color: @green;
+            }
+
+            .concertAt {
+                color: @yellow;
+            }
+
+            .concertVenue {
+                color: @orange;
+            }
+        }
+
+        #concertLoading {
+            color: white;
+        }
+    }
+
+    #themeSwitcher {
+        background-color: @orange;
+        border-color: white;
+    }
+}
+
+// NOTE: possibly change fixed position in future
+#themeSwitcher {
+    position: fixed;
+    bottom: 15px;
+    left: 10px;
+    padding: 17.5px;
+    border-radius: 50%;
+    border: 1px solid @textBlack;
+    background-color: @yellow;
+    color: darken(@orange, 30%);
+
+    &:hover {
+        color: darken(@orange, 40%);
+    }
+}
+
+// Navbar (Header)
+#navBar {
+    background-color: @blue;
+    height: @headerFooterHeight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    #browseLink, #ticketsLink, #logInLink, #cartLink {
+        padding: 5px;
+        border-radius: 50%;
+    }
+
+    #browseLink, #ticketsLink, #logInLink {
+        color: darken(@blue, 45%);
+
+        &:hover {
+            color: darken(@blue, 55%);
+            background-color: @green;
+        }
+    }
+
+    #cartLink {
+        color: darken(@orange, 30%);
+        background-color: @yellow;
+
+        &:hover {
+            color: darken(@orange, 35%);
+            background-color: @orange;
+        }
+    }
+    
+    #navLeft {
+        display: flex;
+        align-items: center;
+    }
+
+    #searchContainer {
+        margin-left: 15px;
+
+        #searchBar {
+            width: 34vw;
+            border-radius: 15px;
+            padding-left: 1vw;
+        }
+
+        i {
+            color: darken(@blue, 45%);
+        }
+    }
+
+    #siteLogo {
+        height: 8vh;
+        width: auto;
+    }
+
+    #navMiddle > a {
+        margin-left: 15px;
+    }
+
+    #cartLink {
+        margin-right: 5px;
+    }  
+
+    .hamburger {
+        .hide();
+        
+        button {
+            background-color: @yellow;
+            color: darken(@orange, 35%);
+        }
+
+        a {
+            color: darken(@blue, 55%);
+
+            &:hover {
+                background-color: @green;
+            }
+        }
+
+        p {
+            color: darken(@green, 65%);
+
+            &:hover {
+                background-color: @blue;
+            }
+        }
+
+        .dropdown-header {
+            background-color: darken(@orange, 25%);
+            color: @textBlack;
+        }
+
+        .dropdown-menu {
+            background-color: @orange;
+        }
+    }
+}
+
+#altSearch {
+    .hide();
+}
+
+// Footer
+footer {
+    height: @headerFooterHeight;
+    background-color: @orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// Form elements
+label {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+input[type='text'] {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input[type='checkbox'], input[type='radio'] {
+    height: 17.5px;
+    width: 17.5px;
+}
+
+.formEle {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+// Messages
+.message {
+    font-weight: 600;
+    color: @textBlack;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+// Concert List
+.concertList {
+    max-width: 800px;
+    margin-bottom: 25px;
+
+    .concertImgCol {
+        display: flex;
+        justify-content: center;
+    }
+
+    .concertInfoCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            margin: 0;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    .concertImg {
+        width: 85%;
+        height: 190px;
+        max-width: 400px;
+        border: 4px solid @green;
+        transition: 0.2s;
+    }
+
+    .concertRow {
+        color: @textBlack;
+        margin-top: 25px;
+
+        // .concertTitle {
+        //     color: darken(@green, 60%);
+        // }
+
+        // .concertAt {
+        //     color: darken(@yellow, 60%);
+        // }
+
+        // .concertVenue {
+        //     color: darken(@orange, 60%);
+        // }
+
+        &:hover {
+            .concertImg {
+                border-color: darken(@green, 25%);
+            }
+        }
+    }
+
+    #concertLoading {
+        .fit-content();
+        margin: auto;
+        margin-top: 5vh;
+    }
+}
+
+// Media Queries
+@media screen and (max-width: 950px) {
+    #navBar {
+        .hamburger {
+            display: block;
+        }
+    
+        #browseLink, #ticketsLink, #cartLink, #logInLink {
+            .hide();
+        }
+        
+        #searchContainer {
+            #searchBar {
+                width: 50vw;
+            }
+        }
+    }
+
+    #themeSwitcher {
+        .hide();
+    }
+} 
+
+@media screen and (max-width: 650px) {
+    #searchContainer {
+        .hide();
+    }
+
+    #altSearch {
+        .fit-content();
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+
+        #altSearchBar {
+            width: 85vw;
+            border-radius: 15px;
+            padding-left: 2vw;
+        }
+
+        i {
+            color: darken(@blue, 45%);
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .concertList {
+        .concertInfoCol {
+            align-items: center;
+        }
+
+        .concertHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+    
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 425px) {
+    .concertList {
+        .concertImg {
+            height: 165.5px;
+        }
+    }
+}
