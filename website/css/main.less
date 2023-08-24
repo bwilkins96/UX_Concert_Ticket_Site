@@ -352,6 +352,9 @@ input[type='checkbox'], input[type='radio'] {
 
 .carousel {
 
+    width: 75vw;
+    margin: auto;
+
     .carousel-inner {
         height: @carouselImgHeight;
         width: 50vw;
@@ -369,6 +372,13 @@ input[type='checkbox'], input[type='radio'] {
         height: @carouselImgHeight;
         margin: auto;
     }    
+
+    button > span {
+        border-radius: 50%;
+        border: 2px solid @orange;
+        background-color: @orange;
+        padding: 28px;
+    }
 }
 
 // Media Queries
