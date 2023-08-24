@@ -178,6 +178,13 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: #212529;
+}
+.footerFixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 }
 label {
   font-weight: 600;
