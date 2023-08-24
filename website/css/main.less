@@ -55,9 +55,18 @@ button {
     }
 }
 
+#homePageHeader {
+    .fit-content();
+    margin: auto;
+}
+
 // Dark theme
 .darkTheme {
     background-color: rgb(35, 35, 35);
+
+    h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
 
     .concertList {
         .concertRow {
@@ -325,6 +334,30 @@ input[type='checkbox'], input[type='radio'] {
             display: flex;
         }
     }
+}
+
+@carouselImgHeight: 70vh;
+
+// Carousel
+.carousel {
+
+    .carousel-inner {
+        height: @carouselImgHeight;
+        width: 50vw;
+        margin: auto;
+        border: 5px solid @green;
+        border-radius: 10px;
+
+        &:hover {
+            border-color: darken(@green, 25%);
+        }
+    }
+
+    .carouselImage {
+        width: 100%;
+        height: @carouselImgHeight;
+        margin: auto;
+    }    
 }
 
 // Media Queries

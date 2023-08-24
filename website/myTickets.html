@@ -73,7 +73,7 @@
             <div class="container concertList" role="region" aria-label="concert list" id="concertTarget" type="x-tmpl-mustache">
 
                 <!-- Concert listing template -->
-                <div id="concertTemplate" type="x-tmpl-mustache">
+                <script id="concertTemplate" type="x-tmpl-mustache">
                     {{ #concerts }}
                     <div class="row concertRow">
                         <a href="#" class="col-sm-7 concertImgCol">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     {{ /concerts }}
-                </div>
+                </script>
 
                 <h1 id="concertLoading">Loading...</h1>
             </div>
