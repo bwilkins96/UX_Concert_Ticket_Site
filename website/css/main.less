@@ -55,11 +55,6 @@ button {
     }
 }
 
-#homePageHeader {
-    .fit-content();
-    margin: auto;
-}
-
 // Dark theme
 .darkTheme {
     background-color: rgb(35, 35, 35);
@@ -336,9 +331,17 @@ input[type='checkbox'], input[type='radio'] {
     }
 }
 
-@carouselImgHeight: 70vh;
+// Home page
+#homePageHeader {
+    .fit-content();
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
 
 // Carousel
+@carouselImgHeight: 60vh;
+
 .carousel {
 
     .carousel-inner {

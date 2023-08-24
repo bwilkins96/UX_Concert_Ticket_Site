@@ -41,11 +41,6 @@ button {
 button:active {
   border-color: white;
 }
-#homePageHeader {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-}
 .darkTheme {
   background-color: #232323;
 }
@@ -262,8 +257,15 @@ input[type='radio'] {
 .concertList .concertQRContainer a {
   display: flex;
 }
+#homePageHeader {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5vh;
+  margin-bottom: 2vh;
+}
 .carousel .carousel-inner {
-  height: 70vh;
+  height: 60vh;
   width: 50vw;
   margin: auto;
   border: 5px solid #baffc9;
@@ -274,7 +276,7 @@ input[type='radio'] {
 }
 .carousel .carouselImage {
   width: 100%;
-  height: 70vh;
+  height: 60vh;
   margin: auto;
 }
 @media screen and (max-width: 950px) {
