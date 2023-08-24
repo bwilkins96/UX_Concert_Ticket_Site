@@ -312,6 +312,12 @@ input[type='radio'] {
   #themeSwitcher {
     display: none;
   }
+  .carousel {
+    width: 100vw;
+  }
+  .carousel .carousel-inner {
+    width: 70vw;
+  }
 }
 @media screen and (max-width: 650px) {
   #searchContainer {
@@ -345,6 +351,19 @@ input[type='radio'] {
   }
   .concertList .concertHeader p {
     margin-bottom: 10px;
+  }
+  .carousel {
+    margin-top: 4vh;
+  }
+  .carousel .carouselImage {
+    height: 50vh;
+  }
+  .carousel .carousel-inner {
+    height: 50vh;
+    width: 95vw;
+  }
+  .carousel button > span {
+    padding: 20px;
   }
 }
 @media screen and (max-width: 425px) {

@@ -351,7 +351,6 @@ input[type='checkbox'], input[type='radio'] {
 @carouselImgHeight: 60vh;
 
 .carousel {
-
     width: 75vw;
     margin: auto;
 
@@ -402,6 +401,14 @@ input[type='checkbox'], input[type='radio'] {
     #themeSwitcher {
         .hide();
     }
+
+    .carousel {
+        width: 100vw;
+
+        .carousel-inner {
+            width: 70vw;
+        }
+    }
 } 
 
 @media screen and (max-width: 650px) {
@@ -444,6 +451,23 @@ input[type='checkbox'], input[type='radio'] {
             }
         }
     }  
+
+    .carousel {
+        margin-top: 4vh;
+
+        .carouselImage {
+            height: 50vh;
+        }
+
+        .carousel-inner {
+            height: 50vh;
+            width: 95vw;
+        }
+
+        button > span {
+            padding: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 425px) {
