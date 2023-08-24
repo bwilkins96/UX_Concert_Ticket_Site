@@ -16,7 +16,7 @@
         <script src="js/mustache.js"></script>
 
         <script src="js/changeTheme.js"></script>
-        <script src="js/template.js"></script>
+        <script src="js/templateTickets.js"></script>
        </head>
 
     <body>
@@ -73,12 +73,12 @@
             <div class="container concertList" role="region" aria-label="concert list" id="concertTarget" type="x-tmpl-mustache">
 
                 <!-- Concert listing template -->
-                <script id="concertTemplate" type="x-tmpl-mustache">
+                <div id="concertTemplate" type="x-tmpl-mustache">
                     {{ #concerts }}
-                    <a href="#" class="row concertRow">
-                        <div class="col-sm-7 concertImgCol">
+                    <div class="row concertRow">
+                        <a href="#" class="col-sm-7 concertImgCol">
                             <img class="concertImg" src="{{ image }}" alt="concert image">
-                        </div>
+                        </a>
                         <div class="col-sm-5 concertInfoCol">
                             <div class="concertHeader">
                                 <h2>
@@ -88,14 +88,21 @@
                                     <span class="concertAt">@</span>
                                     <span class="concertVenue">{{ venue }}</span>
                                 </h2>
-                                <p>{{ time }} {{ date }}</p>
                             </div>
 
-                            <p>${{ price.min }} - ${{ price.max }}</p>
+                            <div class="concertQRContainer">
+                                <img class="concertQR" src="{{ qrImage }}" alt="QR code">
+                                
+                                <div class="concertTicketInfo">
+                                    <p>{{ time }} {{ date }}</p>
+                                    <strong>{{ tickets }} Tickets</strong>
+                                    <a href="#">Print Tickets</a>
+                                </div>
+                            </div>
                         </div>
-                    </a>
+                    </div>
                     {{ /concerts }}
-                </script>
+                </div>
 
                 <h1 id="concertLoading">Loading...</h1>
             </div>

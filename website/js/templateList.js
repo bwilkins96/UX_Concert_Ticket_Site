@@ -1,5 +1,5 @@
 // SWDV 640: User Interface Design
-// Concert class and template data rendering
+// Concert class and template data rendering for concert list page
 
 class Concert {
     constructor(title, venue, time, date, min, max, image='wireframe_img.png') {

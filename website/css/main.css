@@ -234,6 +234,21 @@ input[type='radio'] {
   margin: auto;
   margin-top: 5vh;
 }
+.concertList .concertQRContainer {
+  display: flex;
+  align-items: center;
+}
+.concertList .concertQRContainer .concertQR {
+  height: 90px;
+  width: auto;
+  background-color: #fff;
+}
+.concertList .concertQRContainer .concertTicketInfo {
+  margin-left: 10px;
+}
+.concertList .concertQRContainer a {
+  display: flex;
+}
 @media screen and (max-width: 950px) {
   #navBar .hamburger {
     display: block;
