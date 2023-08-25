@@ -342,6 +342,9 @@ input[type='radio'] {
   height: 60vh;
   margin: auto;
 }
+.carousel button:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
 .carousel button > span {
   border-radius: 50%;
   border: 2px solid #ffdfba;
