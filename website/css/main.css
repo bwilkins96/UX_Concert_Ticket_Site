@@ -354,7 +354,14 @@ input[type='radio'] {
 .concertDetails .ticketsInfo > div {
   width: -moz-fit-content;
   width: fit-content;
-  margin: auto;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+.concertDetails .ticketsInfo > div button {
+  align-self: center;
+  width: 80%;
+  margin-top: 7.5px;
 }
 .concertDetails .ticketDetails {
   display: flex;
@@ -429,6 +436,9 @@ input[type='radio'] {
   .carousel .carousel-inner {
     width: 70vw;
   }
+  .concertDetails {
+    width: 75vw;
+  }
 }
 @media screen and (max-width: 650px) {
   #searchContainer {
@@ -454,6 +464,9 @@ input[type='radio'] {
   }
   #signUpForm {
     margin-top: 1vh;
+  }
+  .concertDetails {
+    width: 85vw;
   }
 }
 @media screen and (max-width: 576px) {
@@ -486,5 +499,11 @@ input[type='radio'] {
 @media screen and (max-width: 425px) {
   .concertList .concertImg {
     height: 165.5px;
+  }
+  .concertDetails {
+    width: 95vw;
+  }
+  .concertDetails img {
+    width: 90%;
   }
 }

@@ -450,7 +450,15 @@ input[type='checkbox'], input[type='radio'] {
 
         & > div {
             .fit-content();
-            margin: auto;
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            
+            button {
+                align-self: center;
+                width: 80%;
+                margin-top: 7.5px;
+            }
         }
     }
 
@@ -551,6 +559,10 @@ input[type='checkbox'], input[type='radio'] {
             width: 70vw;
         }
     }
+
+    .concertDetails {
+        width: 75vw;
+    }
 } 
 
 @media screen and (max-width: 650px) {
@@ -581,6 +593,10 @@ input[type='checkbox'], input[type='radio'] {
 
     #signUpForm {
         margin-top: 1vh;
+    }
+
+    .concertDetails {
+        width: 85vw;
     }
 }
 
@@ -624,6 +640,14 @@ input[type='checkbox'], input[type='radio'] {
     .concertList {
         .concertImg {
             height: 165.5px;
+        }
+    }
+
+    .concertDetails {
+        width: 95vw;
+
+        img {
+            width: 90%;
         }
     }
 }
