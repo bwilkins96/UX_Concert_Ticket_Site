@@ -53,6 +53,10 @@ button {
     &:active {
         border-color: white;
     }
+
+    &:hover {
+        background-color: darken(@orange, 5%);
+    }
 }
 
 // Dark theme
@@ -88,6 +92,12 @@ button {
     #themeSwitcher {
         background-color: @orange;
         border-color: white;
+    }
+
+    form {
+        h1 {
+            color: @textBlack;
+        }
     }
 }
 
@@ -229,12 +239,34 @@ footer {
 }
 
 // Form elements
+form {
+    .fit-content();
+    margin: 15vh auto 0 auto;
+    border: 3px solid darken(@green, 25%);
+    padding: 12px 10vw 12px 10vw;
+    border-radius: 5px;
+    background-color: @green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        .fit-content();
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    button {
+        margin-top: 15px;
+    }
+}
+
 label {
     font-weight: 600;
     margin-right: 10px;
 }
 
-input[type='text'] {
+input[type='text'], input[type='email'], input[type='password'] {
     padding: 5px;
     border-radius: 5px;
 }
@@ -246,8 +278,20 @@ input[type='checkbox'], input[type='radio'] {
 
 .formEle {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 5px 0;
+}
+
+.formWithLink {
+    .fit-content();
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin-top: 10px;
+    }
 }
 
 // Messages
@@ -431,6 +475,10 @@ input[type='checkbox'], input[type='radio'] {
         i {
             color: darken(@blue, 45%);
         }
+    }
+
+    form {
+        margin-top: 10vh;
     }
 }
 

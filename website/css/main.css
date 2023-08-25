@@ -41,6 +41,9 @@ button {
 button:active {
   border-color: white;
 }
+button:hover {
+  background-color: #ffd3a1;
+}
 .darkTheme {
   background-color: #232323;
 }
@@ -70,6 +73,9 @@ button:active {
 .darkTheme #themeSwitcher {
   background-color: #ffdfba;
   border-color: white;
+}
+.darkTheme form h1 {
+  color: #212529;
 }
 #themeSwitcher {
   position: fixed;
@@ -186,11 +192,34 @@ footer {
   width: 100%;
   z-index: -1;
 }
+form {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 15vh auto 0 auto;
+  border: 3px solid #3bff65;
+  padding: 12px 10vw 12px 10vw;
+  border-radius: 5px;
+  background-color: #baffc9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 15px;
+}
+form button {
+  margin-top: 15px;
+}
 label {
   font-weight: 600;
   margin-right: 10px;
 }
-input[type='text'] {
+input[type='text'],
+input[type='email'],
+input[type='password'] {
   padding: 5px;
   border-radius: 5px;
 }
@@ -201,8 +230,19 @@ input[type='radio'] {
 }
 .formEle {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 5px 0;
+}
+.formWithLink {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.formWithLink a {
+  margin-top: 10px;
 }
 .message {
   font-weight: 600;
@@ -337,6 +377,9 @@ input[type='radio'] {
   }
   #altSearch i {
     color: #006ddd;
+  }
+  form {
+    margin-top: 10vh;
   }
 }
 @media screen and (max-width: 576px) {
