@@ -213,6 +213,15 @@ form h1 {
 form button {
   margin-top: 15px;
 }
+#signUpForm {
+  margin-top: 5vh;
+}
+#signUpForm h1 {
+  margin-bottom: 12px;
+}
+#signUpForm button {
+  margin-top: 12px;
+}
 label {
   font-weight: 600;
   margin-right: 10px;
@@ -233,6 +242,9 @@ input[type='radio'] {
   flex-direction: column;
   align-items: flex-start;
   padding: 5px 0;
+}
+.formGroup .formEle {
+  padding: 0 0;
 }
 .formWithLink {
   width: -moz-fit-content;
@@ -380,6 +392,9 @@ input[type='radio'] {
   }
   form {
     margin-top: 10vh;
+  }
+  #signUpForm {
+    margin-top: 1vh;
   }
 }
 @media screen and (max-width: 576px) {
