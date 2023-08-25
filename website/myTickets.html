@@ -70,13 +70,13 @@
             <i id="themeSwitcher" class="fa-solid fa-sun fa-xl" onclick="changeTheme();"></i>
             
             <!-- Concert list -->
-            <div class="container concertList" role="region" aria-label="concert list" id="concertTarget" type="x-tmpl-mustache">
+            <div class="container concertList" role="region" aria-label="concert list" id="concertTarget">
 
                 <!-- Concert listing template -->
                 <script id="concertTemplate" type="x-tmpl-mustache">
                     {{ #concerts }}
                     <div class="row concertRow">
-                        <a href="#" class="col-sm-7 concertImgCol">
+                        <a href="concertDetail.html" class="col-sm-7 concertImgCol">
                             <img class="concertImg" src="{{ image }}" alt="concert image">
                         </a>
                         <div class="col-sm-5 concertInfoCol">

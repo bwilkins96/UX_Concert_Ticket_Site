@@ -58,16 +58,19 @@ button:hover {
 .darkTheme .concertList .concertRow {
   color: white;
 }
-.darkTheme .concertList .concertRow .concertTitle {
+.darkTheme .concertList #concertLoading {
+  color: white;
+}
+.darkTheme .concertHeader .concertTitle {
   color: #baffc9;
 }
-.darkTheme .concertList .concertRow .concertAt {
+.darkTheme .concertHeader .concertAt {
   color: #ffffba;
 }
-.darkTheme .concertList .concertRow .concertVenue {
+.darkTheme .concertHeader .concertVenue {
   color: #ffdfba;
 }
-.darkTheme .concertList #concertLoading {
+.darkTheme .concertDetails p {
   color: white;
 }
 .darkTheme #themeSwitcher {
@@ -315,6 +318,59 @@ input[type='radio'] {
 }
 .concertList .concertQRContainer a {
   display: flex;
+}
+.concertDetails {
+  width: 61.8vw;
+  margin: 2vh auto;
+  display: flex;
+  flex-direction: column;
+}
+.concertDetails img {
+  width: 80%;
+  height: auto;
+  align-self: center;
+}
+.concertDetails h1 {
+  margin: 0;
+}
+.concertDetails .concertInfo {
+  margin-top: 10px;
+}
+.concertDetails #ticketsHeader {
+  margin-top: 20px;
+}
+.concertDetails .ticketsInfo {
+  border: 5px solid #ffff87;
+  border-radius: 5px;
+  background-color: #ffffba;
+}
+.concertDetails .ticketsInfo input {
+  width: 50px;
+  text-align: center;
+}
+.concertDetails .ticketsInfo p {
+  color: #212529;
+}
+.concertDetails .ticketsInfo > div {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.concertDetails .ticketDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.concertDetails .ticketDetails p {
+  margin-right: 15px;
+}
+.concertDetails .ticketSelector {
+  display: flex;
+  align-items: center;
+}
+.concertDetails .ticketSelector label {
+  margin-left: 5px;
 }
 #homePageHeader {
   width: -moz-fit-content;

@@ -2,12 +2,12 @@
 // Concert class and template data rendering
 
 class Concert {
-    constructor(title, venue, time, date, min, max, tickets=0, image='wireframe_img.png', qrImage='qr_code_img.png') {
+    constructor(title, venue, time, date, min, max, tickets=0, image='wireframe_img.png', qrImage='qr_code_img.png', details=[]) {
         this.title = title;
         this.venue = venue;
         this.time = time;
         this.date = date;
-        this.price = { min: min, max: max };
+        this.price = { min: min, max: max, details: details };
         this.tickets = tickets;
         this.image = 'images/' + image;
         this.qrImage = 'images/' + qrImage;
@@ -18,8 +18,14 @@ function main() {
     let concerts = [];
     
     if ($('#ticketPage').length) {
+        const priceDetails = [
+            {price: '25.00', type: 'Back Rows'},
+            {price: '100.00', type: 'Middle Rows'},
+            {price: '500.00', type: 'Front Rows (VIP)'},
+        ];
+
         concerts = [
-            new Concert('Pop Singer', 'Stadium', '8:00 PM', 'dd/mm/yyyy', '25.00', '500.00', 2, 'pop.jpg'),
+            new Concert('Pop Singer', 'Stadium', '8:00 PM', 'dd/mm/yyyy', '25.00', '500.00', 2, 'pop.jpg', 'qr_code_img.png', priceDetails),
         ];
     } else {
         concerts = [
