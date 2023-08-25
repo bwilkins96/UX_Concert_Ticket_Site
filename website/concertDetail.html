@@ -17,6 +17,8 @@
 
         <script src="js/changeTheme.js"></script>
         <script src="js/template.js"></script>
+
+        <script src="js/addToCart.js"></script>
     </head>
 
     <body>
@@ -96,26 +98,27 @@
                 <h2 id="ticketsHeader">Tickets Available</h2>
                 <div class="ticketsInfo">
                     <div>
-                    {{ #price.details }}
+                        {{ #price.details }}
                     
-                    <div class="ticketDetails">
-                        <p>{{ type }} <strong>${{price}}</strong></p>
-                        
-                        <div class="ticketSelector">
-                            <input type="number" min="0" placeholder="0" id="numTickets{{price}}">
-                            <label for="numTickets{{price}}">Tickets</label>
+                        <div class="ticketDetails">
+                            <p>{{ type }} <strong>${{price}}</strong></p>
+                            
+                            <div class="ticketSelector">
+                                <input type="number" min="0" placeholder="0" id="numTickets{{price}}">
+                                <label for="numTickets{{price}}">Tickets</label>
+                            </div>
                         </div>
-                    </div>
 
-                    {{ /price.details }}
+                        {{ /price.details }}
 
-                    <button type="button">Add Tickets to Cart</button>
+                        <button id="addToCartBtn" type="button" onclick="addToCart();">Add Tickets to Cart</button>
                     </div>
                 </div>
 
                 {{ /concerts }}
             </div>
 
+            <div class="message success">Successfully added tickets to cart!</div>
         </main>
 
          <!-- Footer -->

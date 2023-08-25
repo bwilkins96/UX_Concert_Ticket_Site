@@ -260,10 +260,18 @@ input[type='radio'] {
   margin-top: 10px;
 }
 .message {
+  display: none;
   font-weight: 600;
   color: #212529;
   padding: 10px;
   border-radius: 8px;
+  position: fixed;
+  top: 50vh;
+  width: 100vw;
+  text-align: center;
+}
+.success {
+  background-color: #baffc9;
 }
 .concertList {
   max-width: 800px;
@@ -505,5 +513,9 @@ input[type='radio'] {
   }
   .concertDetails img {
     width: 90%;
+  }
+  .concertDetails .ticketsInfo p {
+    display: flex;
+    flex-direction: column;
   }
 }

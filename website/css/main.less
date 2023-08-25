@@ -322,10 +322,19 @@ input[type='checkbox'], input[type='radio'] {
 
 // Messages
 .message {
+    .hide();
     font-weight: 600;
     color: @textBlack;
     padding: 10px;
     border-radius: 8px;
+    position: fixed;
+    top: 50vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.success {
+    background-color: @green;
 }
 
 // Concert List
@@ -648,6 +657,13 @@ input[type='checkbox'], input[type='radio'] {
 
         img {
             width: 90%;
+        }
+
+        .ticketsInfo {
+            p {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
 }
