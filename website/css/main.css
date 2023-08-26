@@ -335,7 +335,7 @@ input[type='radio'] {
 #concertFilters {
   position: fixed;
   left: 0;
-  top: 12vh;
+  top: 13vh;
   background-color: #e3ffe9;
   padding: 10px;
   width: -moz-fit-content;
@@ -386,6 +386,7 @@ input[type='radio'] {
 #filtersToggle {
   position: fixed;
   top: 8vh;
+  left: 0;
   padding: 1px;
   border-radius: 0;
   width: 105px;
@@ -512,6 +513,14 @@ input[type='radio'] {
   .concertDetails {
     width: 75vw;
   }
+  #filtersToggle {
+    top: 2vh;
+    left: 75%;
+    transform: translateX(-50%);
+  }
+  #concertFilters {
+    top: 8vh;
+  }
 }
 @media screen and (max-width: 650px) {
   #searchContainer {
@@ -540,6 +549,11 @@ input[type='radio'] {
   }
   .concertDetails {
     width: 85vw;
+  }
+  #filtersToggle {
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 576px) {

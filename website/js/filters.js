@@ -11,10 +11,10 @@ function toggleFilters() {
 
     if (filters.classList.contains('hide')) {
         filters.classList.remove('hide');
-        button.innerText = '< Hide Filters';
+        button.innerText = 'Hide Filters';
     } else {
         filters.classList.add('hide');
-        button.innerText = 'Show Filters >';
+        button.innerText = 'Show Filters';
     }
 }
 

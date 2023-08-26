@@ -425,7 +425,7 @@ input[type='checkbox'], input[type='radio'] {
 #concertFilters {
     position: fixed;
     left: 0;
-    top: 12vh;
+    top: 13vh;
     background-color: lighten(@green, 8%);
     padding: 10px;
     .fit-content();
@@ -483,6 +483,7 @@ input[type='checkbox'], input[type='radio'] {
 #filtersToggle {
     position: fixed;
     top: @headerFooterHeight;
+    left: 0;
     padding: 1px;
     border-radius: 0;
     width: 105px;
@@ -644,6 +645,16 @@ input[type='checkbox'], input[type='radio'] {
     .concertDetails {
         width: 75vw;
     }
+
+    #filtersToggle {
+        top: 2vh;
+        left: 75%;
+        transform: translateX(-50%);
+    }
+
+    #concertFilters {
+        top: @headerFooterHeight;
+    }
 } 
 
 @media screen and (max-width: 650px) {
@@ -678,6 +689,12 @@ input[type='checkbox'], input[type='radio'] {
 
     .concertDetails {
         width: 85vw;
+    }
+
+    #filtersToggle {
+        top: 2vh;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
