@@ -12,6 +12,9 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
 }
+.hide {
+  display: none;
+}
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -379,6 +382,13 @@ input[type='radio'] {
   font-size: 25px;
   margin: auto;
   margin-bottom: 2px;
+}
+#filtersToggle {
+  position: fixed;
+  top: 8vh;
+  padding: 1px;
+  border-radius: 0;
+  width: 105px;
 }
 .concertDetails {
   width: 61.8vw;

@@ -17,7 +17,7 @@
 
         <script src="js/changeTheme.js"></script>
         <script src="js/template.js"></script>
-        <script src="js/startDate.js"></script>
+        <script src="js/filters.js"></script>
     </head>
 
     <body>
@@ -71,7 +71,9 @@
             <i id="themeSwitcher" class="fa-solid fa-sun fa-xl" onclick="changeTheme();"></i>
 
             <!-- Filters -->
-            <div id="concertFilters" role="region" aria-label="concert filters">
+            <button id="filtersToggle" onclick="toggleFilters();" aria-controls="concertFilters" aria-label="show filters">Show Filters ></button>
+
+            <div id="concertFilters" class="hide" role="region" aria-label="concert filters">
 
                 <div class="filterGroup">
                     <h3>Genre</h3>
