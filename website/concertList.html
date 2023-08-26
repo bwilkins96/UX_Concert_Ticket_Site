@@ -17,6 +17,7 @@
 
         <script src="js/changeTheme.js"></script>
         <script src="js/template.js"></script>
+        <script src="js/startDate.js"></script>
     </head>
 
     <body>
@@ -68,6 +69,96 @@
 
             <!-- Dark/light theme switcher -->
             <i id="themeSwitcher" class="fa-solid fa-sun fa-xl" onclick="changeTheme();"></i>
+
+            <!-- Filters -->
+            <div id="concertFilters" role="region" aria-label="concert filters">
+
+                <div class="filterGroup">
+                    <h3>Genre</h3>
+                    
+                    <div class="filterSubGroup">
+                        <div class="filterEle">
+                            <label for="rock">Rock</label>
+                            <input type="checkbox" id="rock">
+                        </div>
+                        <div class="filterEle">
+                            <label for="pop">Pop</label>
+                            <input type="checkbox" id="pop">
+                        </div>
+                        <div class="filterEle">
+                            <label for="classical">Classical</label>
+                            <input type="checkbox" id="classical">
+                        </div>
+                        <div class="filterEle">
+                            <label for="country">Country</label>
+                            <input type="checkbox" id="country">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filterGroup">
+                    <h3>Price</h3>
+                    
+                    <div class="filterSubGroup">
+                        <div class="filterEle">
+                            <label for="less100">$0 to $100</label>
+                            <input type="checkbox" id="less100">
+                        </div>
+                        <div class="filterEle">
+                            <label for="1to25">$100 to $250</label>
+                            <input type="checkbox" id="1to25"/>
+                        </div>
+                        <div class="filterEle">
+                            <label for="25to5">$250 to $500</label>
+                            <input type="checkbox" id="25to5">
+                        </div>
+                        <div class="filterEle">
+                            <label for="more500">$500+</label>
+                            <input type="checkbox" id="more500">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filterGroup">
+                    <h3>Location</h3>
+                    
+                    <div class="filterSubGroup">
+                        <div id="locationSearch" role="search">
+                            <i class="fa-solid fa-location-dot fa-xs"></i>
+                            <input type="search" placeholder="enter a location" aria-label="search for location...">
+                        </div>
+
+                        <div class="filterEle">
+                            <label for="25miles">Within 25 Miles</label>
+                            <input type="checkbox" id="25miles">
+                        </div>
+                        <div class="filterEle">
+                            <label for="50miles">Within 50 Miles</label>
+                            <input type="checkbox" id="50miles">
+                        </div>
+                        <div class="filterEle">
+                            <label for="100miles">Within 100 Miles</label>
+                            <input type="checkbox" id="100miles">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filterGroup">
+                    <h3>Date</h3>
+
+                    <div class="filterDateGroup">
+                        <div class="filterDate">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate">
+                        </div>
+                        <div class="filterDate">
+                            <label for="endDate">End Date</label>
+                            <input type="date" id="endDate">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             
             <!-- Concert list -->
             <div class="container concertList" role="region" aria-label="concert list" id="concertTarget" type="x-tmpl-mustache">
@@ -99,6 +190,7 @@
 
                 <h1 id="concertLoading">Loading...</h1>
             </div>
+
         </main>
 
          <!-- Footer -->

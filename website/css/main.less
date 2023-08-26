@@ -134,6 +134,9 @@ button {
     align-items: center;
     padding: 10px;
 
+    position: sticky;
+    top: 0;
+
     #browseLink, #ticketsLink, #logInLink, #cartLink {
         padding: 5px;
         border-radius: 50%;
@@ -415,6 +418,65 @@ input[type='checkbox'], input[type='radio'] {
         a {
             display: flex;
         }
+    }
+}
+
+// Filters
+#concertFilters {
+    position: fixed;
+    left: 0;
+    top: 12vh;
+    background-color: lighten(@green, 8%);
+    padding: 10px;
+    .fit-content();
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    h3 {
+        color: @textBlack;
+    }
+
+    .filterEle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .filterDate {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        input {
+            width: 120px;
+            align-self: end;
+        }
+    }
+
+    #locationSearch {
+        margin-bottom: 5px;
+
+        input {
+            width: 135px;
+        }
+    }
+
+    .filterGroup {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filterDateGroup {
+        .fit-content();
+        align-self: end;
+    }
+
+    h3 {
+        .fit-content();
+        font-size: 25px;
+        margin: auto;
+        margin-bottom: 2px;
     }
 }
 
