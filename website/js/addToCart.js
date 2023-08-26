@@ -8,7 +8,7 @@ function handleSuccessMessage() {
 
         setTimeout(() => {
             successMessage.style.display = 'none';
-        }, 1000);
+        }, 1500);
     }
 }
 

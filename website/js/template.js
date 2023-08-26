@@ -14,6 +14,11 @@ class Concert {
     }
 }
 
+function indexCarouselFix() {
+    const carouselItem = document.querySelector('.carousel-item');
+    carouselItem.classList.add('active');
+}
+
 function main() {
     let concerts = [];
     
@@ -42,6 +47,8 @@ function main() {
 
     const rendered = Mustache.render(template, { concerts: concerts });
     $("#concertTarget").html(rendered);
+
+    if ($('#indexMarker').length) indexCarouselFix();
 }
 
 $(document).ready(function() {
