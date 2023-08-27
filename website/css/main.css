@@ -634,6 +634,7 @@ input[type='radio'] {
   }
   .cartContainer {
     width: 90vw;
+    margin-top: 5vh;
   }
   .cartContainer .dateTime {
     display: none;
