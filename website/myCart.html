@@ -75,29 +75,32 @@
                 {{ #concerts }}
 
                 <div class="cartItem">
-                    <div class="itemInfo">
+                    <a href="concertDetail.html" class="itemInfo">
                         <h2>
                             <span class="concertTitle">{{ title }}</span>
-                        </h2>
-                        <h2>
                             <span class="concertAt">@</span>
                             <span class="concertVenue">{{ venue }}</span>
                         </h2>
                         <p>{{ time }} {{ date }}</p>
                         <p>Back Rows <strong>$25.00</strong></p>
-                    </div>
+                    </a>
 
                     <div class="ticketSelector">
                         <input type="number" min="0" value="2" id="numTickets">
-                        <label for="numTickets">Tickets</label>
+                        <label for="numTickets">Tickets</label>    
+                        <i class="fa-solid fa-trash trash" aria-label="remove tickets from cart"></i>
                     </div>
                 </div>
 
                 {{ /concerts }}
                 
                 <div class="cartBottom">
-                    <p class="subTotal">Subtotal: $50.00</p>
-                    <button type="button">Proceed to Purchase</button>
+                    <button id="clearItems" aria-label="clear all items from cart">Clear Items</button>
+
+                    <div class="subTotalContainer">
+                        <p class="subTotal">Subtotal: <strong>$50.00</strong></p>
+                        <a href="#"><button id="purchaseBtn" type="button">Proceed to Purchase</button></a>
+                    </div>
                 </div>
             </div>
 

@@ -418,10 +418,6 @@ input[type='radio'] {
   border-radius: 5px;
   background-color: #ffffba;
 }
-.concertDetails .ticketsInfo input {
-  width: 50px;
-  text-align: center;
-}
 .concertDetails .ticketsInfo p {
   color: #212529;
 }
@@ -446,12 +442,16 @@ input[type='radio'] {
 .concertDetails .ticketDetails p {
   margin-right: 15px;
 }
-.concertDetails .ticketSelector {
+.ticketSelector {
   display: flex;
   align-items: center;
 }
-.concertDetails .ticketSelector label {
+.ticketSelector label {
   margin-left: 5px;
+}
+.ticketSelector input {
+  width: 50px;
+  text-align: center;
 }
 #homePageHeader {
   width: -moz-fit-content;
@@ -497,8 +497,56 @@ input[type='radio'] {
   min-height: 50vh;
   width: 61.8vw;
   background-color: #ffffd4;
-  border: 4px solid #ffdfba;
+  border: 4px solid #ffbc6e;
   border-radius: 10px;
+  position: relative;
+}
+.cartContainer p,
+.cartContainer h2 {
+  color: #212529;
+}
+.cartContainer h2 {
+  margin-bottom: 0;
+}
+.cartContainer .cartItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffdfba;
+}
+.cartContainer .cartBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.cartContainer .cartBottom button {
+  margin: 5px;
+}
+.cartContainer .subTotalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cartContainer #clearItems {
+  background-color: #ffb3ba;
+}
+.cartContainer #clearItems:hover {
+  background-color: #ff9aa3;
+}
+.cartContainer #purchaseBtn {
+  background-color: #baffc9;
+}
+.cartContainer #purchaseBtn:hover {
+  background-color: #a1ffb5;
+}
+.cartContainer .trash {
+  color: #ff6675;
+}
+.cartContainer .trash:hover {
+  color: #ff3346;
 }
 #cartHeader {
   width: -moz-fit-content;

@@ -521,11 +521,6 @@ input[type='checkbox'], input[type='radio'] {
         border-radius: 5px;
         background-color: @yellow;
 
-        input {
-            width: 50px;
-            text-align: center;
-        }
-
         p {
             color: @textBlack;
         }
@@ -554,14 +549,19 @@ input[type='checkbox'], input[type='radio'] {
             margin-right: 15px;
         }
     }
+}
 
-    .ticketSelector {
-        display: flex;
-        align-items: center;
+.ticketSelector {
+    display: flex;
+    align-items: center;
 
-        label {
-            margin-left: 5px;
-        }
+    label {
+        margin-left: 5px;
+    }
+
+    input {
+        width: 50px;
+        text-align: center;
     }
 }
 
@@ -621,8 +621,67 @@ input[type='checkbox'], input[type='radio'] {
     min-height: 50vh;
     width: 61.8vw;
     background-color: lighten(@yellow, 5%);
-    border: 4px solid @orange;
+    border: 4px solid darken(@orange, 15%);
     border-radius: 10px;
+    position: relative;
+
+    p, h2 {
+        color: @textBlack;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .cartItem {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: @orange;
+    }
+
+    .cartBottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        button {
+            margin: 5px;
+        }
+    }
+
+    .subTotalContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #clearItems {
+        background-color: @red;
+
+        &:hover {
+            background-color: darken(@red, 5%);
+        }
+    }
+
+    #purchaseBtn {
+        background-color: @green;
+
+        &:hover {
+            background-color: darken(@green, 5%);
+        }
+    }
+
+    .trash {
+        color: darken(@red, 15%);
+
+        &:hover {
+            color: darken(@red, 25%);
+        }
+    }
 }
 
 #cartHeader {
