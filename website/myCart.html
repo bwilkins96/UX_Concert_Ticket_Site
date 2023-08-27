@@ -17,6 +17,7 @@
 
         <script src="js/changeTheme.js"></script>
         <script src="js/template.js"></script>
+        <script src="js/cart.js"></script>
     </head>
 
     <body>
@@ -71,7 +72,7 @@
             
             <h1 id="cartHeader">My Cart</h1>
 
-            <div style="display:none;" id="concertTemplate" type="x-tmpl-mustache">
+            <script id="concertTemplate" type="x-tmpl-mustache">
                 {{ #concerts }}
 
                 <div class="cartItem">
@@ -86,23 +87,23 @@
                     </a>
 
                     <div class="ticketSelector">
-                        <input type="number" min="0" value="2" id="numTickets">
+                        <input type="number" min="1" value="{{ tickets }}" class="numTickets" onchange="calcSubTotal();">
                         <label for="numTickets">Tickets</label>    
-                        <i class="fa-solid fa-trash trash" aria-label="remove tickets from cart"></i>
+                        <i class="fa-solid fa-trash trash" aria-label="remove tickets from cart" onclick="deleteItem();"></i>
                     </div>
                 </div>
 
                 {{ /concerts }}
                 
                 <div class="cartBottom">
-                    <button id="clearItems" aria-label="clear all items from cart">Clear Items</button>
+                    <button id="clearItems" onclick="clearItems();" aria-label="clear all items from cart">Clear Items</button>
 
                     <div class="subTotalContainer">
                         <p class="subTotal">Subtotal: <strong>$50.00</strong></p>
                         <a href="#"><button id="purchaseBtn" type="button">Proceed to Purchase</button></a>
                     </div>
                 </div>
-            </div>
+            </script>
 
             <div class="cartContainer" id="concertTarget">
 
