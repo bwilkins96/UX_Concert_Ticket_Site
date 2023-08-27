@@ -377,18 +377,6 @@ input[type='checkbox'], input[type='radio'] {
         color: @textBlack;
         margin-top: 25px;
 
-        // .concertTitle {
-        //     color: darken(@green, 60%);
-        // }
-
-        // .concertAt {
-        //     color: darken(@yellow, 60%);
-        // }
-
-        // .concertVenue {
-        //     color: darken(@orange, 60%);
-        // }
-
         &:hover {
             .concertImg {
                 border-color: darken(@green, 25%);
@@ -690,6 +678,11 @@ input[type='checkbox'], input[type='radio'] {
         &:hover {
             color: darken(@red, 25%);
         }
+    }
+
+    #noItems {
+        .fit-content();
+        margin: 15px auto;
     }
 }
 

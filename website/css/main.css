@@ -554,6 +554,11 @@ input[type='radio'] {
 .cartContainer .trash:hover {
   color: #ff3346;
 }
+.cartContainer #noItems {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 15px auto;
+}
 #cartHeader {
   width: -moz-fit-content;
   width: fit-content;

@@ -14,6 +14,10 @@ function clearItems() {
     }
 
     calcSubTotal(true);
+
+    if (!$('#noItems').length) {
+        $('.cartContainer').append('<h2 id="noItems">There are no items in the cart!<h2>');
+    }
 }
 
 function deleteItem() {
