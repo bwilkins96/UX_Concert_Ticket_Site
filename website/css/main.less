@@ -98,8 +98,7 @@ button {
     }
 
     #themeSwitcher {
-        background-color: @orange;
-        border-color: white;
+        background-color: lighten(@yellow, 10%);
     }
 
     form {
@@ -112,16 +111,17 @@ button {
 // NOTE: possibly change fixed position in future
 #themeSwitcher {
     position: fixed;
-    bottom: 15px;
+    bottom: 10px;
     left: 10px;
     padding: 17.5px;
     border-radius: 50%;
-    border: 1px solid @textBlack;
+    border: 2px solid darken(@orange, 30%);
     background-color: @yellow;
     color: darken(@orange, 30%);
 
     &:hover {
         color: darken(@orange, 40%);
+        border-color: darken(@orange, 40%);
     }
 }
 
