@@ -514,6 +514,12 @@ input[type='radio'] {
   align-items: center;
   background-color: #ffdfba;
 }
+.cartContainer .cartItem .itemInfo {
+  margin: 0 10px 0 5px;
+}
+.cartContainer .cartItem .ticketSelector {
+  margin: 0 5px 0 10px;
+}
 .cartContainer .cartBottom {
   display: flex;
   align-items: flex-end;
@@ -578,6 +584,9 @@ input[type='radio'] {
   .concertDetails {
     width: 75vw;
   }
+  .cartContainer {
+    width: 80vw;
+  }
   #filtersToggle {
     top: 2vh;
     left: 75%;
@@ -614,6 +623,15 @@ input[type='radio'] {
   }
   .concertDetails {
     width: 85vw;
+  }
+  .cartContainer {
+    width: 90vw;
+  }
+  .cartContainer .dateTime {
+    display: none;
+  }
+  .cartContainer h2 {
+    font-size: 21px;
   }
   #filtersToggle {
     top: 2vh;
@@ -662,5 +680,11 @@ input[type='radio'] {
   .concertDetails .ticketsInfo p {
     display: flex;
     flex-direction: column;
+  }
+  .cartContainer {
+    width: 97.5vw;
+  }
+  .cartContainer h2 {
+    font-size: 20px;
   }
 }

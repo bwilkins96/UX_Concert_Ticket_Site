@@ -12,6 +12,7 @@
 
 @textBlack: #212529;
 @headerFooterHeight: 8vh;
+@goldenWidth: 61.8vw;
 
 // Mixins
 .fit-content() {
@@ -491,7 +492,7 @@ input[type='checkbox'], input[type='radio'] {
 
 // Concert details
 .concertDetails {
-    width: 61.8vw;
+    width: @goldenWidth;
     margin: 2vh auto;
     display: flex;
     flex-direction: column;
@@ -619,7 +620,7 @@ input[type='checkbox'], input[type='radio'] {
     margin: auto;
     margin-top: 7vh;
     min-height: 50vh;
-    width: 61.8vw;
+    width: @goldenWidth;
     background-color: lighten(@yellow, 5%);
     border: 4px solid darken(@orange, 15%);
     border-radius: 10px;
@@ -638,6 +639,14 @@ input[type='checkbox'], input[type='radio'] {
         justify-content: space-around;
         align-items: center;
         background-color: @orange;
+
+        .itemInfo {
+            margin: 0 10px 0 5px;
+        }
+
+        .ticketSelector {
+            margin: 0 5px 0 10px;
+        }
     }
 
     .cartBottom {
@@ -723,6 +732,10 @@ input[type='checkbox'], input[type='radio'] {
         width: 75vw;
     }
 
+    .cartContainer {
+        width: 80vw;
+    }
+
     #filtersToggle {
         top: 2vh;
         left: 75%;
@@ -766,6 +779,18 @@ input[type='checkbox'], input[type='radio'] {
 
     .concertDetails {
         width: 85vw;
+    }
+
+    .cartContainer {
+        width: 90vw;
+
+        .dateTime {
+            .hide();
+        }
+
+        h2 {
+            font-size: 21px;
+        }
     }
 
     #filtersToggle {
@@ -831,6 +856,14 @@ input[type='checkbox'], input[type='radio'] {
                 display: flex;
                 flex-direction: column;
             }
+        }
+    }
+
+    .cartContainer {
+        width: 97.5vw;
+
+        h2 {
+            font-size: 20px;
         }
     }
 }
