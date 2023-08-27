@@ -47,6 +47,9 @@ button:active {
 button:hover {
   background-color: #ffd3a1;
 }
+.noMin {
+  min-height: 0;
+}
 .darkTheme {
   background-color: #232323;
 }
